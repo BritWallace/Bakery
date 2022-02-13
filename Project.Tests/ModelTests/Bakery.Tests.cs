@@ -24,5 +24,14 @@ namespace Bakery.Tests
       PastryStuff newPastryStuff = new PastryStuff(3);
       Assert.AreEqual(typeof(PastryStuff), newPastryStuff.GetType());
     }
+
+    [TestMethod]
+    
+    public void BreadStuffClass_ChooseAmount_Int()
+    {
+      int breadCount = 3;
+      BreadStuff newBreadStuff = new BreadStuff(breadCount);
+      Assert.AreEqual(3, newBreadStuff.Quantity);
   }
+}
 }
