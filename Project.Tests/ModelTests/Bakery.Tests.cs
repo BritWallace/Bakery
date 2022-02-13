@@ -4,6 +4,7 @@ using Treats.Logic;
 using BreadTime;
 using PastryTime;
 using System;
+using TotalCost;
 
 namespace Bakery.Tests
 {
@@ -76,5 +77,20 @@ namespace Bakery.Tests
       double price = 9;
       Assert.AreEqual(5, newPastryStuff.Quantity, price);
   }
+  
+  [TestClass]
+  public class TotalCost
+  {
+  
+  
+  [TestMethod]
+    
+    public void BreadStuffClass_ReturnsTotalCost_Int()
+    {
+      OrderTime newOrderTime = new OrderTime(5, 10);
+  
+      Assert.AreEqual(typeof(OrderTime), newOrderTime.GetType());
+  }
 }
+  }
 }
