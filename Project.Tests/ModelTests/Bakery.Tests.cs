@@ -14,14 +14,14 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadConstructor_CreateInstancesOfBread_Bread()
     {
-      BreadStuff newBreadStuff = new BreadStuff(3);
+      BreadStuff newBreadStuff = new BreadStuff(1);
       Assert.AreEqual(typeof(BreadStuff), newBreadStuff.GetType());
     }
 
     [TestMethod]
     public void PastryConstructor_CreateInstancesOfPastry_Pastry()
     {
-      PastryStuff newPastryStuff = new PastryStuff(3);
+      PastryStuff newPastryStuff = new PastryStuff(1);
       Assert.AreEqual(typeof(PastryStuff), newPastryStuff.GetType());
     }
 
@@ -59,6 +59,14 @@ namespace Bakery.Tests
       PastryStuff newPastryStuff = new PastryStuff(2);
       double price = 10;
       Assert.AreEqual(2, newPastryStuff.Quantity, price);
+  }
+  [TestMethod]
+    
+    public void BreadStuffClass_ReturnCostOfFiveBread_Int()
+    {
+      BreadStuff newBreadStuff = new BreadStuff(5);
+      double price = 20;
+      Assert.AreEqual(5, newBreadStuff.Quantity, price);
   }
 }
 }
