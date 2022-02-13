@@ -1,16 +1,22 @@
 using System;
-// using System.Collections.Generic;
-// //using Scrabble;
+using Treats.Logic;
 
-// namespace Classy
-// {
-//     public class KeepItClassy
-//     {
-//         public static string whoIsClassy(string name) 
-//         {
-//           Console.WriteLine(name);
-//           string classyPerson = name + " you are classy!";
-//           return classyPerson;
-//         }
-//     }
-// }
+namespace BreadTime
+{
+public class MoreStoreStuff
+{
+    public string typeOfPastry {get; set;}
+    public int quantity {get; set;}
+
+    public int Price {get; set;}
+
+    public MoreStoreStuff(string PastryType, string qty)
+    {
+        typeOfPastry = PastryType;
+        int quantityTemp;
+        Int32.TryParse(qty, out quantityTemp);
+        quantity = quantityTemp;
+    }
+}
+}
+

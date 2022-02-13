@@ -7,4 +7,14 @@ using System;
 namespace Bakery.Tests
 {
   
+  [TestClass]
+  public class BakeryTests 
+  {
+    [TestMethod]
+    public void BreadConstructor_CreateInstancesOfBread_Bread()
+    {
+      BreadStuff newBreadStuff = new BreadStuff(3);
+      Assert.AreEqual(typeof(BreadStuff), newBreadStuff.GetType());
+    }
+  }
 }
