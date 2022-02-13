@@ -45,11 +45,20 @@ namespace Bakery.Tests
 
   [TestMethod]
     
-    public void PastryStuffClass_ReturnCostOfTwoBread_Int()
+    public void breadStuffClass_ReturnCostOfTwoBread_Int()
     {
       BreadStuff newBreadStuff = new BreadStuff(2);
       double price = 10;
       Assert.AreEqual(2, newBreadStuff.Quantity, price);
+  }
+
+    [TestMethod]
+    
+    public void PastryStuffClass_ReturnCostOfTwoPastry_Int()
+    {
+      PastryStuff newPastryStuff = new PastryStuff(2);
+      double price = 10;
+      Assert.AreEqual(2, newPastryStuff.Quantity, price);
   }
 }
 }
