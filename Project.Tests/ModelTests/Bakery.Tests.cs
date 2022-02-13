@@ -68,5 +68,13 @@ namespace Bakery.Tests
       double price = 20;
       Assert.AreEqual(5, newBreadStuff.Quantity, price);
   }
+  [TestMethod]
+    
+    public void PastryStuffClass_ReturnCostOfFivePastry_Int()
+    {
+      PastryStuff newPastryStuff = new PastryStuff(5);
+      double price = 9;
+      Assert.AreEqual(5, newPastryStuff.Quantity, price);
+  }
 }
 }
