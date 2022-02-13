@@ -3,28 +3,30 @@ using Treats.Logic;
 
 namespace BreadTime
 {
-public class StoreStuff
+public class BreadStuff
 {
-    public int Price {get; set;}
-    public int Quantity {get; set;}
+    public int Price { get; private set;}
+    public int Quantity { get; private set; }
 
-
-
-    public StoreStuff(int price, int quantity = 0)
+    public BreadStuff(int quantity, int price = 0)
     {
-        Price = price;
-        Quantity = quantity;
-
+    Price = price;
+    Quantity = quantity;
     }
 
-    // public int TotalPrice()
-    // {
-    //     if(Quantity >2)
-    // }
+    public int QuantityPrice()
+    {
+    if(Quantity > 2) 
+    {
+        int remainder = Quantity % 3;
+        Price = (((Quantity - remainder) / 3) * 10) + (remainder * 5);
+        return Price;
+    }
+    else 
+    {
+        Price = Quantity * 5;
+        return Price;
+    }
+    }
 }
 }
-
-// typeOfBread = BreadType;
-//         int quantityTemp;
-//         Int32.TryParse(qty, out quantityTemp);
-//         quantity = quantityTemp;

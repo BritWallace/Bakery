@@ -1,22 +1,34 @@
 using System;
 using Treats.Logic;
 
-namespace BreadTime
+namespace PastryTime
 {
-public class MoreStoreStuff
+public class PastryStuff
 {
-    public string typeOfPastry {get; set;}
-    public int quantity {get; set;}
+    public int Price { get; private set;}
+    public int Quantity { get; private set; }
 
-    public int Price {get; set;}
-
-    public MoreStoreStuff(string PastryType, string qty)
+    public PastryStuff(int quantity, int price = 0)
     {
-        typeOfPastry = PastryType;
-        int quantityTemp;
-        Int32.TryParse(qty, out quantityTemp);
-        quantity = quantityTemp;
+    Price = price;
+    Quantity = quantity;
+    }
+
+    public int QuantityPrice()
+    {
+    if(Quantity > 2) 
+    {
+        int remainder = Quantity % 3;
+        Price = (((Quantity - remainder) / 3) * 5) + (remainder * 2);
+        return Price;
+    }
+    else 
+    {
+        Price = Quantity * 2;
+        return Price;
+    }
     }
 }
 }
+
 

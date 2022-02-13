@@ -90,7 +90,8 @@ namespace Bakery.Tests
       OrderTime newOrderTime = new OrderTime(5, 10);
   
       Assert.AreEqual(typeof(OrderTime), newOrderTime.GetType());
+    }
+
   }
-}
   }
 }

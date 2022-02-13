@@ -38,7 +38,7 @@ This was a team Epicodus project that showcases our knowledge of C#.
 
 ## Known Bugs
 
-* _List bugs here_
+* _There are bugs with are you ready to order question. And all the bread and pastries are free!_
 
 ## Contact Me
 
