@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using Treats.Logic;
 using BreadTime;
+using PastryTime;
 using System;
 
 namespace Bakery.Tests
@@ -15,6 +16,13 @@ namespace Bakery.Tests
     {
       BreadStuff newBreadStuff = new BreadStuff(3);
       Assert.AreEqual(typeof(BreadStuff), newBreadStuff.GetType());
+    }
+
+    [TestMethod]
+    public void PastryConstructor_CreateInstancesOfPastry_Pastry()
+    {
+      PastryStuff newPastryStuff = new PastryStuff(3);
+      Assert.AreEqual(typeof(PastryStuff), newPastryStuff.GetType());
     }
   }
 }
