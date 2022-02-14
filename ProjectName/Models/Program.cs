@@ -19,7 +19,7 @@ public static void Main()
 
     Console.Write("Are you ready to order? 'Respond yes or no   ");
     string CostumerReply = Console.ReadLine();
-    if ("yes" == "yes")
+    if (CostumerReply == "yes")
     {
 
         Console.Write("How many loafs of bread would you like to order today? (Enter 0 if none.)\n" );
@@ -28,27 +28,39 @@ public static void Main()
         string pastryQuantity = Console.ReadLine();
         Console.Write($"You ordered {breadQuantity} loafs of bread and {pastryQuantity} tasty pastries.  \n");
         
+    
+    
+        // double total = BreadStuff.(quantityPrice);
         BreadStuff breadOrder = new BreadStuff (int.Parse(breadQuantity));
-        // PastryStuff pastryOrder = new PastryStuff(pastryQuantity);
-        // TotalCost  = totalCost();
+        PastryStuff pastryOrder = new PastryStuff(int.Parse(pastryQuantity));
 
-        Console.Write($"The total cost of the bread order is {0:C}\n", breadOrder);
-        Console.Write($"The cost of the pastries order is {0:C}\n");
-        Console.Write($"Coming to a grand total of {0:C}\n");
+        // int breadCost = breadOrder.Price;
+        // 
+        int breadCost = breadOrder.QuantityPrice();
+        Console.WriteLine(breadCost);
+        int pastryCost = pastryOrder.QuantityPrice();
+        Console.WriteLine(pastryCost);
+
+        // OrderTime totalCost = new  ();
+
+        // Console.Write($"The total cost of the bread order is {0:C}\n");
+        // Console.Write($"The cost of the pastries order is {0:C}\n");
+        // Console.Write($"Coming to a grand total of {0:C}\n");
         Console.Write("Thanks for coming into the Olive Bakery. Please come again!");
         
         // BreadStuff newBreadOrder = new BreadStuff(quantity);
         // newBreadOrder.QuantityPrice();
-    // }
-    // else 
-    // {
-    //     // ("no" == "no");"
-    // }
+    }
+    else 
+    {
+        Console.WriteLine("Okay. Order when ready. ");
+    }
     
+    //  
     }
     }
 }
 
 }
-}
+
 
