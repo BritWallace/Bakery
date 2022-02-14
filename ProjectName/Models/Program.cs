@@ -22,44 +22,30 @@ public static void Main()
     if (CostumerReply == "yes")
     {
 
-        Console.Write("How many loafs of bread would you like to order today? (Enter 0 if none.)\n" );
+        Console.WriteLine("How many loafs of bread would you like to order today? (Enter 0 if none.)" );
         string breadQuantity = Console.ReadLine();
-        Console.Write("How many pastries would you like today? (Enter 0 if none. \n");
+        Console.WriteLine("How many pastries would you like today? (Enter 0 if none.");
         string pastryQuantity = Console.ReadLine();
         Console.Write($"You ordered {breadQuantity} loafs of bread and {pastryQuantity} tasty pastries.  \n");
         
-    
-    
-        // double total = BreadStuff.(quantityPrice);
         BreadStuff breadOrder = new BreadStuff (int.Parse(breadQuantity));
         PastryStuff pastryOrder = new PastryStuff(int.Parse(pastryQuantity));
 
-        // int breadCost = breadOrder.Price;
-        // 
         int breadCost = breadOrder.QuantityPrice();
-        Console.WriteLine(breadCost);
+        Console.WriteLine($"Your bread cost ${breadCost}");
         int pastryCost = pastryOrder.QuantityPrice();
-        Console.WriteLine(pastryCost);
-
-        // OrderTime totalCost = new  ();
-
-        // Console.Write($"The total cost of the bread order is {0:C}\n");
-        // Console.Write($"The cost of the pastries order is {0:C}\n");
-        // Console.Write($"Coming to a grand total of {0:C}\n");
-        Console.Write("Thanks for coming into the Olive Bakery. Please come again!");
+        Console.WriteLine($"Your pastries cost ${pastryCost}");
+        Console.WriteLine($"The total cost is ${pastryCost + breadCost}");
+        Console.Write("Thanks for coming into the Olive Bakery. Please come again soon!");
         
-        // BreadStuff newBreadOrder = new BreadStuff(quantity);
-        // newBreadOrder.QuantityPrice();
     }
     else 
     {
-        Console.WriteLine("Okay. Order when ready. ");
-    }
-    
-    //  
+        Console.WriteLine("Okay. Order when you are ready. ");
     }
     }
-}
+    }
+    }
 
 }
 
