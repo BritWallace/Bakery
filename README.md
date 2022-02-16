@@ -24,12 +24,12 @@ This was a team Epicodus project that showcases our knowledge of C#.
 
 * Clone repository.
 * Open the repo on your editor of choice/terminal
-* If your program doesn't have a UI make sure to delete the line marked by a comment in the following file: ProjectName.Solution/ProjectName/ProjectName.csproj
+* If your program doesn't have a UI make sure to delete the line marked by a comment in the following file: Olive-Bakery/ProjectName
 
-* Change directory using cd into Bakery.Solution/Bakery/ModelsTests and run "dotnet restore"
-* Run "dotnet build" as well.
+* Change directory using cd into Olive-Bakery/Bakery/ModelsTests and run "dotnet restore"
+* Run "dotnet build" as well.ak
 * Run "dotnet test" to check tests.
-* CD in to Bakery.Solution/Bakery/ModelsTests and run "dotnet restore"
+* CD in to Olive-Bakery/Bakery/ModelsTests and run "dotnet restore"
 * Run "dotnet build"
 * Run "dotnet run"
 * Place the obj/ and bin/ folders in a .gitignore file. You do not want to push these large files up to Github.

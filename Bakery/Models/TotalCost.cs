@@ -6,11 +6,11 @@ using PastryTime;
 
 namespace TotalCost 
 {
-  public class OrderTime 
+  public class TotalCost
   {
     public double TotalCost { get; set; }
 
-    public OrderTime(double pastryCount, double breadCount)
+    public TotalCost(double pastryCount, double breadCount)
     {
       TotalCost = pastryCount + breadCount;
     }
